@@ -13,24 +13,12 @@ body {
   color: #111111;
 }
 
-.bg {
-  background: url(../images/home_pattern.svg);
-}
-
-.container {
-  margin: 0 auto;
-  width: 1200px;
-  background: var(--white);
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
   background: var(--perple);
-  position: fixed;
-  width: 100%;
   z-index: 1;
 }
 
@@ -54,6 +42,16 @@ body {
   padding: 50px 30px;
 }
 
+.bg {
+  background: url(../images/home_pattern.svg);
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  background: var(--white);
+}
+
 /* slider */
 .slider {
   margin: 0 auto;
@@ -61,6 +59,7 @@ body {
   height: 800px;
   background: #ffffff;
   position: relative;
+  overflow: hidden;
 }
 
 .slider img {
@@ -131,7 +130,7 @@ body {
 /* login */
 .section_login {
   width: 100%;
-  height: 100vh;
+  height: 86.5vh;
   background: var(--white);
 }
 
@@ -139,7 +138,7 @@ body {
   background-image: url(../images/login_bg.png);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,7 +148,7 @@ body {
   font-size: 50px;
   font-weight: 800;
   color: var(--perple);
-  margin: 150px 0 50px;
+  margin: 50px 0 50px;
   text-align: center;
 }
 
@@ -198,6 +197,7 @@ body {
   width: 120px;
   height: 50px;
   border: 1px solid var(--violet);
+  background: var(--white);
   border-radius: 5px;
   font-size: 20px;
   font-weight: 700;
