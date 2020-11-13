@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+
+:root {
+  --perple: #5538c2;
+  --violet: #9276f4;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--perple);
+  font-family: serif;
+  font-size: 16px;
+  color: #111111;
+}
+
+.bg {
+  background: url(../images/home_pattern.svg);
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  background: var(--white);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: var(--perple);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  padding-left: 50px;
+}
+
+.logo img {
+  width: 100px;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  font-size: 26px;
+}
+
+.nav li {
+  padding: 50px 30px;
+}
+
+/* slider */
+.slider {
+  margin: 0 auto;
+  width: 100%;
+  height: 800px;
+  background: #ffffff;
+  position: relative;
+}
+
+.slider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider h2 {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--white);
+  text-shadow: 5px 2px 0px #200289;
+}
+
+/* section */
+
+.sec_01 {
+  height: 885px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 130px;
+}
+
+.sec_01 h3 {
+  font-size: 40px;
+  text-align: center;
+  line-height: 3;
+}
+
+.sec_02,
+.sec_03,
+.sec_04 {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.sec_02 h4,
+.sec_03 h4,
+.sec_04 h4 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--perple);
+  margin-bottom: 50px;
+}
+
+.sec_02 ul,
+.sec_03 ul,
+.sec_04 ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section img {
+  display: block;
+  width: 340px;
+  height: 480px;
+}
+
+/* login */
+.section_login {
+  width: 100%;
+  height: 100vh;
+  background: var(--white);
+}
+
+.section_login {
+  background-image: url(../images/login_bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_login h2 {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--perple);
+  margin: 150px 0 50px;
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.login_id,
+.login_pw {
+  width: 400px;
+  padding: 24px 0 24px 30px;
+  margin: 20px 0;
+  background: var(--violet);
+  border-radius: 5px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.login_id::placeholder,
+.login_pw::placeholder {
+  color: #b89fff;
+  font-size: 16px;
+}
+
+.login_bottom {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login_extra {
+  display: flex;
+  flex-direction: column;
+  color: var(--violet);
+  line-height: 1.4;
+}
+.login_bold {
+  font-weight: 900;
+}
+
+.login_btn {
+  width: 120px;
+  height: 50px;
+  border: 1px solid var(--violet);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--violet);
+}
+
+/* footer */
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .logo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-size: 18px;
+  color: var(--violet);
+  font-weight: 900;
+}
+
+.footer .sns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: initial;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.footer .sns li {
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin: 100px 15px;
+  box-sizing: border-box;
+}
+
+.copyright {
+  color: var(--white);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+  box-sizing: border-box;
+}
