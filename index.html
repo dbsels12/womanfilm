@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/reset.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -16,6 +18,7 @@
       <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
     </div>
     <ul class="nav">
+      <li><a href="./index.html">홈</a></li>
       <li><a href="#">소개</a></li>
       <li><a href="./login.html">로그인</a></li>
     </ul>
@@ -35,14 +38,71 @@
     <h2>우먼무비에서 <br> <span>여성감독</span>의 영화를<br>찾아보세요</h2>
   </div>
 
-  <section class="section main_bg">
+  <section class="main_bg">
     <div class="container">
-      <div class="sec_01">
+      <div class="section sec_01">
         <div class="photo"><img src="./images/home_img.svg" alt="woman"></div>
         <h3>여성 영화인들과 <br>여성영화를 <br>홍보하며 응원합니다</h3>
       </div>
-  
-      <div class="sec_02">
+
+      <div class="section sec_02">
+          <div class="list_title">
+            <h3>감독 인터뷰</h3>
+            <h4>영화 제작이야기부터 여러 이야기들을 확인하세요</h4>
+          </div>
+          <ul class="interview">
+            <li>
+              <span class="photo"><img src="./images/interview/Mask Group01.png"  alt="interview"></span>
+              <ul class="inter_text">
+                <li class="inter_title">'벌새'</li>
+                <li class="inter_name">김보라 감독-</li>
+                <li class="inter_extra">그 시절의 나에게,
+                  지금 10들에게 보내는
+                  위로
+                </li>
+                <li><a href="http://www.cine21.com/news/view/?mag_id=93748" target="_blank" class="inter_btn">인터뷰보기</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="photo"><img src="./images/interview/Mask Group02.png" alt="interview"></span>
+              <ul class="inter_text">
+                <li class="inter_title">'애비규환'</li>
+                <li class="inter_name">최하나 감독-</li>
+                <li class="inter_extra">조금 모자란 가족이어도 괜찮다</li>
+                <li><a href="http://www.cine21.com/news/view/?idx=4&mag_id=96479" target="_blank" class="inter_btn">인터뷰보기</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="photo"><img src="./images/interview/Mask Group03.png" alt="interview"></span>
+              <ul class="inter_text">
+                <li class="inter_title">'리틀포레스트'</li>
+                <li class="inter_name">임순례 감독-</li>
+                <li class="inter_extra">자기에게 맞는 길을 천천히 걸어가면 된다</li>
+                <li><a href="http://www.cine21.com/news/view/?mag_id=89539" target="_blank" class="inter_btn">인터뷰보기</a></.>
+              </ul>
+            </li>
+
+            <li>
+              <span class="photo"><img src="./images/interview/Mask Group04.png" alt="interview"></span>
+              <ul class="inter_text">
+                <li class="inter_title">'메기'</li>
+                <li class="inter_name">이옥섭 감독-</li>
+                <li class="inter_extra">위로와 질문을 던지는 존재가 있었으면</li>
+                <li><a href="http://www.cine21.com/news/view/?idx=0&mag_id=91474" target="_blank" class="inter_btn">인터뷰보기</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="banner_01">
+      <a href="#"><img src="./images/event/banner1.png" alt="banner"></a>
+    </div>
+
+    <div class="container">  
+      <div class="section sec_03">
         <div class="sec_text">
           <div class="list_title">
             <h3>상영 예정 여성영화</h3>
@@ -86,7 +146,7 @@
         </ul>
       </div>
   
-      <div class="sec_03">
+      <div class="section sec_04">
         <div class="sec_text">
           <div class="list_title">
             <h3>국내 추천 여성영화</h3>
@@ -100,8 +160,10 @@
           <li><a href="#"><img src="./images/poster/poster_ov_06.jpg" alt=""></a></li>
         </ul>
       </div>
-  
-      <div class="sec_04">
+    </div>
+
+    <div class="container">  
+      <div class="section sec_05">
         <div class="sec_text">
           <div class="list_title">
             <h3>해외 추천 여성영화</h3>
@@ -115,14 +177,15 @@
           <li><a href="#"><img src="./images/poster/poster_ov_09.jpg" alt=""></a></li>
         </ul>
       </div>
-    </div>
+    </div>    
+
   </section>
 
 
   <div class="footer">
     <div class="footer_top">
       <div class="logo">
-        <img src="./images/logo.png" alt="logo">
+       a<img src="./images/logo.png" alt="logo">
         <p>womanfilm</p>
       </div>
   
@@ -150,6 +213,20 @@
     autoplay:true
 
   });
+
+      // sec_02 
+  var img = $('.interview .photo')
+  var inText = $('.interview .inter_text')
+  
+  
+
+  img.click(function(){
+    $(this).next().toggleClass('active').animate() 
+  })
+
+
+  
+ 
 
   </script>     
 </body>

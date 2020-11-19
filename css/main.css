@@ -7,7 +7,6 @@
 }
 
 body {
-  background: var(--perple);
   font-family: "Nanum Gothic", sans-serif;
   font-size: 16px;
   color: #111111;
@@ -19,7 +18,7 @@ body {
   justify-content: space-between;
   padding: 0 50px;
   background: var(--perple);
-  z-index: 1;
+  z-index: 100;
   font-family: "Nanum Myeongjo", serif;
   font-size: 20px;
   font-weight: 400;
@@ -46,8 +45,30 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
+  width: 90%;
   background: var(--white);
+}
+
+.list_title h3 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--perple);
+  font-family: "Nanum Myeongjo", serif;
+  margin-bottom: 10px;
+}
+
+.list_title h4 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #111111;
+  margin-bottom: 50px;
+}
+
+.sec_text a {
+  color: var(--violet);
+  font-size: 18px;
+  font-weight: 900;
 }
 
 /* slider */
@@ -73,19 +94,33 @@ body {
   font-size: 80px;
   text-align: right;
   font-weight: 900;
-  color: var(--violet);
-  text-shadow: 5px 2px 0px var(--white);
+  color: var(--white);
+  font-family: "Nanum Myeongjo", serif;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
 
 .slider h2 span {
-  color: var(--perple);
+  color: var(--white);
   font-size: 100px;
 }
 
 /* section */
 .main_bg {
   background: url(../images/home_pattern.svg);
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
 }
+
+.section {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+/* sec-01 */
 
 .sec_01 {
   height: 885px;
@@ -93,6 +128,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 130px;
+  flex-direction: initial;
 }
 
 .sec_01 h3 {
@@ -102,46 +138,99 @@ body {
   font-weight: 700;
 }
 
-.sec_02,
-.sec_03,
-.sec_04 {
-  height: 900px;
+/* sec-02 */
+
+.sec_02 .interview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sec_02 .interview > li {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.sec_02 .photo {
+  z-index: 100;
+}
+
+.sec_02 .photo img {
+  display: block;
+  width: 200px;
+  height: 300px;
+}
+
+.sec_02 .inter_text {
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 30px;
+  padding-left: 10px;
+  position: relative;
+  top: 0;
+  left: -300px;
+  background: lightblue;
+  transition: all 0.3s;
 }
 
-.sec_text {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.sec_02 .inter_text.active {
+  left: 0;
 }
 
-.list_title h3 {
-  font-size: 50px;
-  font-weight: 900;
-  color: var(--perple);
-  font-family: "Nanum Myeongjo", serif;
-  margin-bottom: 10px;
-}
-
-.list_title h4 {
-  font-size: 20px;
-  font-weight: 900;
-  color: #111111;
-  margin-bottom: 50px;
-}
-
-.sec_text a {
-  color: var(--violet);
+.sec_02 .inter_title {
   font-size: 18px;
-  font-weight: 900;
+  color: var(--violet);
+}
+.sec_02 .inter_name {
+  font-size: 24px;
+  margin: 10px 0 20px;
 }
 
-.sec_02 > ul,
+.sec_02 .inter_extra {
+  font-size: 30px;
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.sec_02 .inter_btn {
+  display: block;
+  width: 220px;
+  height: 48px;
+  font-size: 18px;
+  border: initial;
+  background: var(--violet);
+  color: var(--white);
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 30px;
+  line-height: 46px;
+}
+
+/* banner_01 */
+.banner_01 {
+  cursor: pointer;
+  margin-top: -72px;
+}
+
+.banner_01 a {
+  display: block;
+}
+
+.banner_01 img {
+  display: block;
+  width: 100%;
+}
+
+/* sec_03 */
+
 .sec_03 > ul,
-.sec_04 > ul {
+.sec_04 > ul,
+.sec_05 > ul {
   display: flex;
   justify-content: space-between;
 }
@@ -156,9 +245,9 @@ body {
   opacity: 1;
 }
 
-.poster_01,
-.poster_02,
-.poster_03 {
+.poster_03,
+.poster_04,
+.poster_05 {
   position: relative;
 }
 
@@ -270,6 +359,9 @@ body {
 
 /* footer */
 
+.footer {
+  background: var(--perple);
+}
 .footer_top {
   display: flex;
   justify-content: space-between;
@@ -283,13 +375,14 @@ body {
   font-size: 18px;
   color: var(--violet);
   font-weight: 900;
+  z-index: 100;
 }
 
 .footer .sns {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: initial;
+  color: var(--perple);
   font-size: 30px;
   box-sizing: border-box;
 }
@@ -300,7 +393,7 @@ body {
   background: var(--white);
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 44px;
   margin: 100px 15px;
   box-sizing: border-box;
 }
