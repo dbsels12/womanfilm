@@ -10,6 +10,7 @@ body {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 16px;
   color: #111111;
+  overflow-x: hidden;
 }
 
 .header {
@@ -50,6 +51,13 @@ body {
   background: var(--white);
 }
 
+.sec_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
 .list_title h3 {
   font-size: 50px;
   font-weight: 900;
@@ -62,7 +70,6 @@ body {
   font-size: 20px;
   font-weight: 900;
   color: #111111;
-  margin-bottom: 50px;
 }
 
 .sec_text a {
@@ -140,6 +147,10 @@ body {
 
 /* sec-02 */
 
+.sec_02 .list_title {
+  margin-bottom: 50px;
+}
+
 .sec_02 .interview {
   display: flex;
   justify-content: space-between;
@@ -151,17 +162,41 @@ body {
   height: 300px;
   display: flex;
   margin-bottom: 60px;
+  border-radius: 10px;
   overflow: hidden;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
 }
 
 .sec_02 .photo {
   z-index: 100;
+  position: relative;
 }
 
 .sec_02 .photo img {
   display: block;
   width: 200px;
   height: 300px;
+}
+
+.sec_02 .dimm {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #bbbbbb;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.sec_02 .dimm:hover {
+  opacity: 1;
 }
 
 .sec_02 .inter_text {
@@ -173,9 +208,10 @@ body {
   padding-left: 10px;
   position: relative;
   top: 0;
-  left: -300px;
-  background: lightblue;
+  left: -500px;
+  background: #f4e9ff;
   transition: all 0.3s;
+  border-radius: 0 10px 10px 0;
 }
 
 .sec_02 .inter_text.active {
@@ -214,11 +250,7 @@ body {
 /* banner_01 */
 .banner_01 {
   cursor: pointer;
-  margin-top: -72px;
-}
-
-.banner_01 a {
-  display: block;
+  margin-top: -87px;
 }
 
 .banner_01 img {
@@ -238,16 +270,9 @@ body {
 .section img {
   width: 340px;
   height: 480px;
-  cursor: pointer;
 }
 
-.poster_01 a:hover .img_hover {
-  opacity: 1;
-}
-
-.poster_03,
-.poster_04,
-.poster_05 {
+.sec_03 > ul > li {
   position: relative;
 }
 
@@ -255,29 +280,197 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  color: var(--white);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 10px;
+  padding-left: 20px;
+  box-sizing: border-box;
   opacity: 0;
+  transition: all 0.2s;
+}
+
+.img_hover:hover {
+  opacity: 1;
 }
 
 .img_hover h4 {
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 30px;
-  font-family: "Nanum Myeongjo", serif;
 }
 
 .img_hover p {
   font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+/* sec_04 */
+
+/* sec_05 */
+
+/* banner_02 */
+.banner_02 {
+  cursor: pointer;
+  margin: -83px 0 -83px;
+}
+
+.banner_02 img {
+  width: 100%;
+}
+
+/* sec_06 */
+.sec_06 {
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sec_06 .campain {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.sec_06 .campain img {
+  width: 100%;
+  height: 100%;
+}
+
+.sec_06 .campain .left_img,
+.sec_06 .campain .right_img {
+  width: 268px;
+  height: 423px;
+}
+
+.sec_06 .campain .left_img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.sec_06 .campain .right_img {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.sec_06 .campain .campain_text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 930px;
+  height: 414px;
+  background: #ffe4e4;
+  font-size: 54px;
+  line-height: 2;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.sec_06 .campain .campain_text .text_bold {
+  font-weight: 800;
+}
+
+.sec_06 .campain .campain_text .red {
+  color: red;
+  font-weight: 800;
+}
+
+.banner_03 {
+  margin-top: -132px;
+}
+
+.banner_03 img {
+  width: 100%;
+}
+
+/* movie_list */
+.mv_list_bg {
+  background: url(../images/film_pattern.svg);
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+}
+
+.mv_list h3 {
+  margin: 200px 0;
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--perple);
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.mv_list {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.mv_list ul {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.poster_list .poster {
+  width: 400px;
+  height: 566px;
+  position: relative;
+}
+
+.poster_list .poster img {
+  width: 100%;
+  height: 100%;
+}
+.poster_list .mv_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 272px;
+  height: 350px;
+  background: #9276f4;
+  padding: 10px 10px 20px;
+  box-sizing: border-box;
+}
+
+.mv_text h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.mv_text p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.mv_btn {
+  display: block;
+  border: none;
+  outline: none;
+  background: var(--white);
+  cursor: pointer;
+  font-size: 8px;
+  width: 120px;
+  height: 40px;
+  line-height: 1;
+  border-radius: 20px;
+  color: var(--perple);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.mv_btn .bold {
   font-weight: 700;
-  padding-bottom: 20px;
-  line-height: 1.5;
+  font-size: 20px;
 }
 
 /* login */

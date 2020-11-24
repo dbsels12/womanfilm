@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+    </div>
+    <ul class="nav">
+      <li><a href="./index.html">홈</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="./login.html">로그인</a></li>
+    </ul>
+  </div>
+
+
+  <section class="mv_list_bg">
+    <div class="container">
+      <div class="mv_list"> 
+        <h3>한국 여성영화 소개</h3>
+
+        <ul class="poster_list">
+          <li>
+            <div class="poster"><img src="./images/poster/poster_01.jpg" alt="poster"></div>
+            <div class="mv_text">
+              <h4>내가 죽던 날</h4>
+              <p>감독 : 박지완</p>
+              <p>배우 : 김혜수, 이정은, 노정의</p>
+              <p>장르 : 드라마</p>
+              <p>기본 : 12세 이상, 116분, 한국</p>
+              <p>줄거리<br>
+                태풍이 몰아치던 밤, 외딴섬 절벽 끝에서
+                유서 한 장만을 남긴 채 소녀가 사라진다.
+                오랜 공백 이후 복직을 앞둔 형사 ‘현수’는
+                범죄 사건의 주요 증인이었던 소녀의 실종
+                을 자살로 종결 짓기 위해…</p>
+              <button class="mv_btn"> <span class="bold">예매하기</span><br>(cgv로 연결됩니다)</button>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </section>
+
+
+  <div class="footer">
+    <div class="footer_top">
+      <div class="logo">
+       <img src="./images/logo.png" alt="logo">
+        <p>womanfilm</p>
+      </div>
+  
+      <ul class="sns">
+        <li><a href="https://ko-kr.facebook.com/" target="_blank"><i class="xi-facebook"></i></a></li>
+        <li><a href="www.youtube.com" target="_blank"><i class="xi-youtube-play"></i></a></li>
+        <li><a href="https://www.tumblr.com/" target="_blank"><i class="xi-tumblr"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><i class="xi-instagram"></i></a></li>
+        <li><a href="https://twitter.com/?lang=ko" target="_blank"><i class="xi-twitter"></i></a></li>
+      </ul>
+    </div>
+
+    <span class="copyright">dasign by. yunjin</span>
+  </div>
+  
+
+
+
+
+  <script  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+  $('.slide').slick({
+    autoplay:true
+
+  });
+
+  // sec_02 
+  var img = $('.interview .photo')
+  var inText = $('.interview .inter_text')
+  
+  
+
+  img.click(function(){
+    $(this).next().toggleClass('active').animate() 
+  })
+
+ 
+
+  </script>     
+</body>
+</html>
