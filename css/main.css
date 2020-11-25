@@ -4,6 +4,7 @@
   --perple: #5538c2;
   --violet: #9276f4;
   --white: #ffffff;
+  --yellow: #fff9c4;
 }
 
 body {
@@ -86,6 +87,12 @@ body {
   background: #ffffff;
   position: relative;
   overflow: hidden;
+  font-size: 80px;
+  text-align: right;
+  font-weight: 900;
+  color: var(--white);
+  font-family: "Nanum Myeongjo", serif;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
 
 .slider img {
@@ -98,25 +105,35 @@ body {
   position: absolute;
   top: 30%;
   right: 5%;
-  font-size: 80px;
-  text-align: right;
-  font-weight: 900;
-  color: var(--white);
-  font-family: "Nanum Myeongjo", serif;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+
+  opacity: 0;
+  animation: scale 0.5s forwards;
 }
 
 .slider h2 span {
   color: var(--white);
   font-size: 100px;
+  animation: womanDirecter 0.3s 1s forwards;
 }
 
 /* section */
 .main_bg {
+  position: relative;
+}
+
+.main_bg::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
   background: url(../images/home_pattern.svg);
-  background-repeat: repeat-x;
-  background-size: cover;
+  background-repeat: repeat-y;
   background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  opacity: 0.5;
 }
 
 .section {
@@ -131,11 +148,28 @@ body {
 
 .sec_01 {
   height: 885px;
+  flex-direction: initial;
+}
+
+.section_card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 130px;
-  flex-direction: initial;
+}
+
+.section_card .woman_icon {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: var(--yellow);
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+.section_card .woman_icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .sec_01 h3 {
@@ -209,7 +243,7 @@ body {
   position: relative;
   top: 0;
   left: -500px;
-  background: #f4e9ff;
+  background: var(--yellow);
   transition: all 0.3s;
   border-radius: 0 10px 10px 0;
 }
@@ -219,8 +253,9 @@ body {
 }
 
 .sec_02 .inter_title {
-  font-size: 18px;
-  color: var(--violet);
+  font-size: 16px;
+  color: #81760c;
+  font-weight: 700;
 }
 .sec_02 .inter_name {
   font-size: 24px;
@@ -400,75 +435,83 @@ body {
   background-position: center;
 }
 
-.mv_list h3 {
+.mv_list .list_title {
   margin: 200px 0;
-  font-size: 50px;
-  font-weight: 900;
-  color: var(--perple);
-  font-family: "Nanum Myeongjo", serif;
 }
 
 .mv_list {
   padding: 0 30px;
   box-sizing: border-box;
+  margin-bottom: 300px;
 }
 
 .mv_list ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   color: var(--white);
 }
 
-.poster_list .poster {
-  width: 400px;
-  height: 566px;
+.mv_poster {
   position: relative;
+  margin-bottom: 400px;
 }
 
-.poster_list .poster img {
+.mv_poster .poster {
+  width: 400px;
+  height: 566px;
+}
+
+.mv_poster .poster img {
   width: 100%;
   height: 100%;
 }
-.poster_list .mv_text {
+.mv_poster .mv_text {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: -220px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 272px;
-  height: 350px;
+  height: 360px;
   background: #9276f4;
   padding: 10px 10px 20px;
   box-sizing: border-box;
+  filter: drop-shadow(5px 7px 11px rgba(0, 0, 0, 0.25));
 }
 
-.mv_text h4 {
+.mv_poster .mv_text h4 {
   font-size: 22px;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
-.mv_text p {
+.mv_poster .mv_text p {
   font-size: 14px;
   margin-bottom: 12px;
   line-height: 1.2;
+  font-weight: 500;
 }
 
-.mv_btn {
+.mv_poster .mv_btn {
   display: block;
   border: none;
   outline: none;
   background: var(--white);
   cursor: pointer;
-  font-size: 8px;
-  width: 120px;
-  height: 40px;
-  line-height: 1;
-  border-radius: 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+  width: 140px;
+  height: 50px;
+  line-height: 1.2;
+  border-radius: 50px;
   color: var(--perple);
   text-align: center;
   margin: 0 auto;
   margin-top: 30px;
 }
 
-.mv_btn .bold {
+.mv_poster .mv_btn .bold {
   font-weight: 700;
   font-size: 20px;
 }
@@ -598,4 +641,45 @@ body {
   justify-content: center;
   padding-bottom: 48px;
   box-sizing: border-box;
+}
+
+/* gotop */
+.go_top {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--violet);
+  text-align: center;
+}
+
+.go_top i {
+  top: 36px;
+  cursor: pointer;
+}
+
+/* 애니메이션 */
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes womanDirecter {
+  0% {
+    color: var(--white);
+  }
+  100% {
+    color: #ffe600;
+  }
 }
