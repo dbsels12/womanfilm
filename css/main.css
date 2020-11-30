@@ -325,6 +325,12 @@ body {
 }
 
 .banner_01 .container {
+<<<<<<< HEAD
+}
+
+.banner_01 a {
+  position: relative;
+=======
   position: relative;
 }
 
@@ -333,6 +339,7 @@ body {
   top: 0;
   left: 0;
   width: 1200px;
+>>>>>>> bdb048dedef170967e400135f21a0fb0a9809425
 }
 
 .banner_01 img {
@@ -456,8 +463,10 @@ body {
 .banner_03 {
   cursor: pointer;
   box-sizing: border-box;
+  position: relative;
 }
 .banner_03 .banner_bg {
+  position: absolute;
   content: "";
   bottom: 0;
   left: 0;
@@ -470,9 +479,7 @@ body {
 }
 
 .banner_03 a {
-  content: "";
-  bottom: 0;
-  left: 0;
+  position: relative;
 }
 
 .banner_03 img {
