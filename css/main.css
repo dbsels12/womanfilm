@@ -87,12 +87,12 @@ body {
   font-weight: 900;
   color: var(--perple);
   font-family: "Nanum Myeongjo", serif;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .list_title h4 {
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 500;
   color: #111111;
 }
 
