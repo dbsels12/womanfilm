@@ -130,7 +130,7 @@ body {
   position: absolute;
   top: 30%;
   right: 5%;
-
+  line-height: 1.2;
   opacity: 0;
   animation: scale 0.5s forwards;
 }
@@ -538,6 +538,7 @@ body {
   text-align: center;
   line-height: 60px;
   z-index: 10;
+  display: none;
 }
 
 .go_top i {
