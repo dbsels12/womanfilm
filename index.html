@@ -203,8 +203,20 @@
           <li><a href="#"><img src="./images/poster/poster_ov_08.jpg" alt=""></a></li>
           <li><a href="#"><img src="./images/poster/poster_ov_09.jpg" alt=""></a></li>
         </ul>
-      </div>      
+      </div> 
     </div>
+
+    <div class="container sce_notice">
+      <div class="notice">
+        <p class="notice_title">공지사항</p>
+        <ul class="notice_text">
+          <li><a class="notice_text01">시스템 점검안내</a></li>
+          <li><a class="notice_text02">CGV예매 연동관련 안내</a></li>
+          <li><a class="notice_text03">[애비규환] 영화 감상평 이벤트관련 공지사항</a></li>
+        </ul>
+      </div>
+    </div>  
+
 
     <div class="mask_campain">
       <div class="mask_text">
@@ -224,7 +236,20 @@
 
 
   <div class="footer">
-    <div class="footer_top">
+
+    <ul class="footer_top">
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">부서별 전화번호</a></li>
+      <li><a href="#">광고 및 제휴안내</a></li>
+      <li><a href="#">고객센터</a></li>
+      <li><a href="#">개인정보취급방침</a></li>
+      <li><a href="#">이메일주소무단수집거부</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">사이트맵</a></li>
+    </ul>
+
+
+    <div class="footer_and">
       <div class="logo">
        <img src="./images/logo.png" alt="logo">
         <p>womanfilm</p>
@@ -269,6 +294,25 @@
     //페러렉스
     $('.banner_02').parallax({imageSrc: './images/event/banner2.jpg'});
     $('.mask_campain').parallax({imageSrc: './images/event/mask.jpg'});
+
+    
+    //공지사항
+    var notice = function()
+    {
+        setTimeout(function(){
+            $('.notice_text li:first').animate( {marginTop: '-50px'}, 400, function()
+            {
+                $(this).detach().appendTo('ul.notice_text').removeAttr('style');
+            });
+            notice();
+        }, 3000);
+    };
+    notice();
+
+
+
+
+
 
 
     //메뉴클릭

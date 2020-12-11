@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
 :root {
-  --perple: #5538c2;
+  --perple: #220892;
   --violet: #9276f4;
   --white: #ffffff;
   --yellow: #fff9c4;
@@ -12,6 +12,12 @@ body {
   font-size: 16px;
   color: #111111;
   overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 .header {
@@ -33,7 +39,7 @@ body {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .nav li {
@@ -389,8 +395,6 @@ body {
 
 /* sec_04 */
 
-/* sec_05 */
-
 /* banner_02 */
 .banner_02 {
   cursor: pointer;
@@ -416,6 +420,48 @@ body {
   display: block;
   width: 25%;
   transform: translateX(8%);
+}
+
+/* sec_05 */
+
+/* notice */
+.notice {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 500;
+  display: flex;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  padding: 16px 0 16px 60px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  background: var(--white);
+}
+
+.sce_notice {
+  height: 180px;
+}
+
+.notice_title {
+}
+
+.notice_title::after {
+  content: "";
+  height: 10px;
+  overflow: hidden;
+  border-right: 2px solid #707070;
+  margin: 0 10px 0;
+  font-size: 10px;
+}
+
+.notice_text {
+  display: block;
+  height: 23px;
+  overflow: hidden;
+}
+
+.notice_text li {
+  margin-bottom: 30px;
 }
 
 /* mask_campain */
@@ -481,7 +527,19 @@ body {
 .footer {
   background: var(--perple);
 }
+
 .footer_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 130px;
+  box-sizing: border-box;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--white);
+}
+
+.footer_and {
   display: flex;
   justify-content: space-between;
   align-items: center;
