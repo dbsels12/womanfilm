@@ -12,6 +12,9 @@
 
 </head>
 <body>
+  <div class="go_top">
+    <i class="xi-arrow-top"></i>
+  </div>
   <div class="header">
     <div class="logo">
       <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
@@ -333,6 +336,20 @@
       }
 
     })
+
+    //탑으로
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 500) {
+        $('.go_top').fadeIn();
+    } else {
+        $('.go_top').fadeOut();
+    }
+    })
+
+    $('.go_top').click(function() {
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
 
 
 
